@@ -120,6 +120,7 @@
 import Vue from 'vue';
 import Options from 'vue-class-component';
 import { Watch, Component, Prop } from 'vue-property-decorator';
+import Color from 'ts-color-class';
 
 @Options({
     components: {},
@@ -148,6 +149,9 @@ export default class AnyBulb extends Vue {
     // sodiumVapor
     // metalHalide
     // highPressureSodium
+
+    //TODO use the color type everywhere
+    highNoonSunColor = new Color([255, 255, 251]);
 
     highNoonSun = { red: 255, green: 255, blue: 251 };
     directSunlight = { red: 255, green: 255, blue: 255 };
@@ -198,7 +202,7 @@ export default class AnyBulb extends Vue {
     intensity = 1;
 
     mounted() {
-        //Option auswählen
+        //Preselect an option
         this.selectedLightType = this.lightTypes[6].id;
         this.lightTypeChanged(this.selectedLightType);
     }
