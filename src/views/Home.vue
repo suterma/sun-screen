@@ -7,7 +7,6 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-//import Color from "ts-color-class/src/Color.js";
 import Color from "ts-color-class";
 import AnyBulb from "@/components/AnyBulb.vue"; // @ is an alias to /src
 
@@ -17,7 +16,7 @@ import AnyBulb from "@/components/AnyBulb.vue"; // @ is an alias to /src
   },
 })
 export default class About extends Vue {
-  colorChanged(newVal: Color.Color) {
+  colorChanged(newVal: Color): void {
     console.debug(newVal);
   }
 }

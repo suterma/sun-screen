@@ -95,8 +95,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Options from "vue-class-component";
-import { Watch, Component, Prop } from "vue-property-decorator";
-//import Color from "ts-color-class/src/Color.js";
+import { Watch } from "vue-property-decorator";
 import Color from "ts-color-class";
 
 @Options({
@@ -127,25 +126,25 @@ export default class AnyBulb extends Vue {
   // metalHalide
   // highPressureSodium
 
-  highNoonSunColor = new Color.Color([255, 255, 251]);
-  directSunlightColor = new Color.Color([255, 255, 255]);
-  overcastSkyColor = new Color.Color([201, 226, 255]);
-  clearBlueSkyColor = new Color.Color([64, 156, 255]);
-  candleColor = new Color.Color([255, 147, 41]);
-  fourtyWattTungstenColor = new Color.Color([255, 197, 143]);
-  hundredWattTungstenColor = new Color.Color([255, 214, 170]);
-  halogenColor = new Color.Color([255, 241, 224]);
-  carbonArcColor = new Color.Color([255, 250, 244]);
-  warmFluorescentColor = new Color.Color([255, 244, 229]);
-  standardFluorescentColor = new Color.Color([244, 255, 250]);
-  coolWhiteFluorescentColor = new Color.Color([212, 235, 255]);
-  fullSpectrumFluorescentColor = new Color.Color([255, 244, 242]);
-  growLightFluorescentColor = new Color.Color([255, 239, 247]);
-  blackLightFluorescentColor = new Color.Color([167, 0, 255]);
-  mercuryVaporColor = new Color.Color([216, 247, 255]);
-  sodiumVaporColor = new Color.Color([255, 209, 178]);
-  metalHalideColor = new Color.Color([242, 252, 255]);
-  highPressureSodiumColor = new Color.Color([255, 183, 76]);
+  highNoonSunColor = new Color([255, 255, 251]);
+  directSunlightColor = new Color([255, 255, 255]);
+  overcastSkyColor = new Color([201, 226, 255]);
+  clearBlueSkyColor = new Color([64, 156, 255]);
+  candleColor = new Color([255, 147, 41]);
+  fourtyWattTungstenColor = new Color([255, 197, 143]);
+  hundredWattTungstenColor = new Color([255, 214, 170]);
+  halogenColor = new Color([255, 241, 224]);
+  carbonArcColor = new Color([255, 250, 244]);
+  warmFluorescentColor = new Color([255, 244, 229]);
+  standardFluorescentColor = new Color([244, 255, 250]);
+  coolWhiteFluorescentColor = new Color([212, 235, 255]);
+  fullSpectrumFluorescentColor = new Color([255, 244, 242]);
+  growLightFluorescentColor = new Color([255, 239, 247]);
+  blackLightFluorescentColor = new Color([167, 0, 255]);
+  mercuryVaporColor = new Color([216, 247, 255]);
+  sodiumVaporColor = new Color([255, 209, 178]);
+  metalHalideColor = new Color([242, 252, 255]);
+  highPressureSodiumColor = new Color([255, 183, 76]);
 
   lightTypes = [
     { id: "1", color: this.highNoonSunColor },
@@ -175,24 +174,26 @@ export default class AnyBulb extends Vue {
   ambientBlue = 255;
   intensity = 1;
 
-  mounted() {
+  mounted(): void {
     //Preselect an option
     this.selectedLightType = this.lightTypes[6].id;
     this.lightTypeChanged(this.selectedLightType);
   }
 
   @Watch("selectedLightType")
-  lightTypeChanged(newValue: string) {
+  lightTypeChanged(newValue: string): void {
     for (var lightType of this.lightTypes) {
-      if (lightType.id === newValue) {
+      if (lightType.id === newValue) { 
         this.ambientRed = lightType.color.getRed();
         this.ambientGreen = lightType.color.getGreen();
         this.ambientBlue = lightType.color.getBlue();
+        this.$emit("changed", lightType.color);
+        console.debug("AnyBulb.vue::lightTypeChanged->emit", lightType.color);
       }
     }
   }
 }
-</script>
+</script>   
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
