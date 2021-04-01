@@ -9,6 +9,9 @@
 		"prettier.tabWidth": 4,
 		"editor.formatOnSave": true,
 		"javascript.preferences.quoteStyle": "single",
-		"typescript.preferences.quoteStyle": "single"
+		"typescript.preferences.quoteStyle": "single",
+        "editor.detectIndentation": false,
+        "vetur.format.options.tabSize": 4,
+        "vetur.format.enable": false
 	}
 }

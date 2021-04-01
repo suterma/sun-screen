@@ -7,17 +7,17 @@
                 'background-color': `rgb(${selectedColor.getRed()}, ${selectedColor.getGreen()}, ${selectedColor.getBlue()})`,
             }"
         ></div>
-        <AnyBulb @changed="colorChanged" />
+        <ColorSelector @changed="colorChanged" />
     </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Color from 'ts-color-class';
-import AnyBulb from '@/components/AnyBulb.vue'; // @ is an alias to /src
+import ColorSelector from '@/components/ColorSelector.vue'; // @ is an alias to /src
 
 @Component({
     components: {
-        AnyBulb,
+        ColorSelector,
     },
 })
 export default class About extends Vue {

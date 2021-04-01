@@ -98,11 +98,10 @@ import Color from 'ts-color-class';
 @Options({
     components: {},
 })
-/** Represents a bulb, emulating the light of a selected source type
- * @devdoc Values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
+/** Selects a color, emulating a light source at a given intensity.
+ * @devdoc Color values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
  */
-export default class AnyBulb extends Vue {
-    // Color values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
+export default class ColorSelector extends Vue {
     // highNoonSun
     // directSunlight
     // overcastSky
@@ -165,12 +164,10 @@ export default class AnyBulb extends Vue {
         { id: '19', color: this.highPressureSodiumColor },
     ];
 
-    selectedLightType = '1';
+    selectedLightType = '7';
     brightness = 1;
 
     mounted(): void {
-        //Preselect an option
-        this.selectedLightType = this.lightTypes[6].id;
         this.lightTypeChanged(this.selectedLightType);
     }
 
@@ -198,7 +195,7 @@ export default class AnyBulb extends Vue {
             color.getGreen() * brightness,
             color.getBlue() * brightness
         );
-        console.debug('AnyBulb.vue::emitColorChange->emit', dimmedColor);
+        console.debug('ColorSelector.vue::emitColorChange->emit', dimmedColor);
         this.$emit('changed', dimmedColor);
     }
 }
