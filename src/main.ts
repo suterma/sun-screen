@@ -7,7 +7,8 @@ import store from "./store";
 // Using vue-material
 import VueMaterial from "vue-material";
 import "vue-material/dist/vue-material.min.css";
-import "vue-material/dist/theme/default.css";
+// vue-material theme
+import "vue-material/dist/theme/black-green-light.css";
 
 Vue.use(VueMaterial);
 
