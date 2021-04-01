@@ -2,8 +2,9 @@
     <div class="page-container">
         <md-app>
             <md-app-toolbar class="md-primary">
-                <span class="md-title">SunScreen</span>
-
+                <router-link to="/">
+                    <span class="md-title" title="SunScreen"> <AppIcon /></span>
+                </router-link>
                 <div id="nav">
                     <router-link to="/">Light</router-link> |
                     <router-link to="/about">About</router-link>
@@ -16,6 +17,18 @@
         </md-app>
     </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import AppIcon from '@/components/AppIcon.vue'; // @ is an alias to /src
+
+@Component({
+    components: {
+        AppIcon,
+    },
+})
+export default class App extends Vue {}
+</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
