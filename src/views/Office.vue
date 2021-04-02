@@ -16,7 +16,7 @@ import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an a
         LightEmittingArea,
     },
 })
-export default class Home extends Vue {
+export default class Office extends Vue {
     selectedColor = new Color('black');
 
     colorChanged(newVal: Color): void {

@@ -11,6 +11,15 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
+    path: "/office",
+    name: "Office",
+    // route level code-splitting
+    // this generates a separate chunk (office.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "office" */ "../views/Office.vue"),
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
