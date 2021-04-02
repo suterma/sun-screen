@@ -1,31 +1,4 @@
 # sun-screen
-A web app that uses the screen to emulate various natural and artificial light sources
+A web app that uses the screen to emulate various natural and artificial light sources. It's intended use is for video calls in a two-monitor setup. On one screen you can run the video call, while the unused monitor can improve the lighting.
 
-Note: This project is currently in alpha stage
-
----
-
-# Notes
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+_Note: This project is currently in alpha stage_
