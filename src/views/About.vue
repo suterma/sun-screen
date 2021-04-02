@@ -68,6 +68,15 @@
                         </a>
                         by draeath (No licence, copyright with the author)
                     </li>
+                    <li>
+                        <a
+                            href="https://github.com/dsteinman/ts-color-class"
+                            target="_blank"
+                            rel="noopener"
+                            >ts-color-class
+                        </a>
+                        by Dan Steinman (No licence, copyright with the author)
+                    </li>
                 </ul>
             </div>
             <div
