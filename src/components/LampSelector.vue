@@ -5,8 +5,9 @@
         <div class="md-layout md-gutter">
             <div class="md-layout-item">
                 <ColorDial
-                    direction="bottom"
-                    targetButtonName="flare"
+                    dialClass="md-bottom-right"
+                    direction="top"
+                    targetButtonName="lightbulb"
                     :annotatedColors="lightTypes"
                     @changed="lightTypeChanged"
                 />
@@ -39,37 +40,67 @@ import { AnnotatedColor } from '../code/AnnotatedColor';
 @Options({
     components: { ColorDial },
 })
-/** A selector for the color representing a sky condition
+/** A selector for the color representing an artificial lamp
  * @devdoc Values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
  */
-export default class SkySelector extends Vue {
-    highNoonSunColor = new Color([255, 255, 251]);
-    overcastSkyColor = new Color([201, 226, 255]);
-    clearBlueSkyColor = new Color([64, 156, 255]);
+export default class LampSelector extends Vue {
+    candleColor = new Color([255, 147, 41]);
+    fourtyWattTungstenColor = new Color([255, 197, 143]);
+    hundredWattTungstenColor = new Color([255, 214, 170]);
+    halogenColor = new Color([255, 241, 224]);
+    warmFluorescentColor = new Color([255, 244, 229]);
+    standardFluorescentColor = new Color([244, 255, 250]);
+    coolWhiteFluorescentColor = new Color([212, 235, 255]);
+    fullSpectrumFluorescentColor = new Color([255, 244, 242]);
 
     lightTypes = [
+        new AnnotatedColor('candle', 'Candle', this.candleColor, 'cake'),
         new AnnotatedColor(
-            'highNoonSun',
-            'High Noon Sun',
-            this.highNoonSunColor,
-            'light_mode'
+            'fourtyWattTungsten',
+            '40W Incandescent',
+            this.fourtyWattTungstenColor,
+            'light'
         ),
         new AnnotatedColor(
-            'overcastSky',
-            'Overcast Sky',
-            this.overcastSkyColor,
-            'wb_cloudy'
+            'hundredWattTungsten',
+            '100W Incandescent',
+            this.hundredWattTungstenColor,
+            'tungsten'
         ),
         new AnnotatedColor(
-            'clearBlueSky',
-            'Clear Blue Sky',
-            this.clearBlueSkyColor,
-            'landscape'
+            'halogen',
+            'Halogen',
+            this.halogenColor,
+            'online_prediction'
+        ),
+        new AnnotatedColor(
+            'warmFluorescent',
+            'Warm Fluorescent',
+            this.warmFluorescentColor,
+            'wb_iridescent'
+        ),
+        new AnnotatedColor(
+            'standardFluorescent',
+            'Standard Fluorescent',
+            this.standardFluorescentColor,
+            'wb_iridescent'
+        ),
+        new AnnotatedColor(
+            'coolWhiteFluorescent',
+            'Cool White Fluorescent',
+            this.coolWhiteFluorescentColor,
+            'wb_iridescent'
+        ),
+        new AnnotatedColor(
+            'fullSpectrumFluorescent',
+            'Full Spectrum Fluorescent',
+            this.fullSpectrumFluorescentColor,
+            'wb_iridescent'
         ),
     ];
 
-    selectedLightType = this.lightTypes[0];
     brightness = 1;
+    selectedLightType = this.lightTypes[0];
 
     lightTypeChanged(newVal: AnnotatedColor): void {
         this.selectedLightType = newVal;

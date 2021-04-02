@@ -1,9 +1,14 @@
 <template>
     <div>
+        <!-- background: rgb(2,0,36);
+background: linear-gradient(110deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 38%, rgba(0,212,255,1) 46%); -->
+
+        <!-- 'background-color': `rgb(${color.getRed()}, ${color.getGreen()}, ${color.getBlue()})`, -->
+
         <div
             class="light-emitting-area"
             :style="{
-                'background-color': `rgb(${color.getRed()}, ${color.getGreen()}, ${color.getBlue()})`,
+                background: `linear-gradient(90deg, rgb(${color.getRed()}, ${color.getGreen()}, ${color.getBlue()}) 40%, rgb(${colorSecondary.getRed()}, ${colorSecondary.getGreen()}, ${colorSecondary.getBlue()}) 60%)`,
             }"
         ></div>
     </div>
@@ -11,7 +16,6 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Color from 'ts-color-class';
-import AnyBulb from '@/components/AnyBulb.vue'; // @ is an alias to /src
 
 @Component({
     components: {},
@@ -19,6 +23,9 @@ import AnyBulb from '@/components/AnyBulb.vue'; // @ is an alias to /src
 export default class LightEmittingArea extends Vue {
     @Prop({ required: true, type: Color, default: new Color('black') })
     color!: Color;
+
+    @Prop({ required: true, type: Color, default: new Color('white') })
+    colorSecondary!: Color;
 }
 </script>
 

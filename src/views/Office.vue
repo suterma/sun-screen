@@ -1,27 +1,38 @@
 <template>
     <div>
-        <LightEmittingArea :color="selectedColor" />
-        <SkySelector @changed="colorChanged" />
+        <LightEmittingArea
+            :color="selectedSkyColor"
+            :colorSecondary="selectedLampColor"
+        />
+        <SkySelector @changed="skyColorChanged" />
+        <LampSelector @changed="lampColorChanged" />
     </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Color from 'ts-color-class';
 import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
+import LampSelector from '@/components/LampSelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
 
 @Component({
     components: {
         SkySelector,
+        LampSelector,
         LightEmittingArea,
     },
 })
 export default class Office extends Vue {
-    selectedColor = new Color('black');
+    selectedSkyColor = new Color('white');
+    selectedLampColor = new Color('orange');
 
-    colorChanged(newVal: Color): void {
+    skyColorChanged(newVal: Color): void {
         console.debug(newVal);
-        this.selectedColor = newVal;
+        this.selectedSkyColor = newVal;
+    }
+    lampColorChanged(newVal: Color): void {
+        console.debug(newVal);
+        this.selectedLampColor = newVal;
     }
 }
 </script>
