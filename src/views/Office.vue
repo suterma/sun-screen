@@ -1,18 +1,18 @@
 <template>
     <div>
         <LightEmittingArea :color="selectedColor" />
-        <AnyBulb @changed="colorChanged" />
+        <SkySelector @changed="colorChanged" />
     </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Color from 'ts-color-class';
-import AnyBulb from '@/components/AnyBulb.vue'; // @ is an alias to /src
+import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
 
 @Component({
     components: {
-        AnyBulb,
+        SkySelector,
         LightEmittingArea,
     },
 })
