@@ -3,7 +3,9 @@
         <LightEmittingArea
             :color="selectedSkyColor"
             :colorSecondary="selectedLampColor"
+            :splitPosition="this.splitPosition"
         />
+        <GradationDial v-model.number="splitPosition" />
         <SkySelector @changed="skyColorChanged" />
         <LampSelector @changed="lampColorChanged" />
     </div>
@@ -14,15 +16,18 @@ import Color from 'ts-color-class';
 import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
 import LampSelector from '@/components/LampSelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
+import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to /src
 
 @Component({
     components: {
+        GradationDial,
         SkySelector,
         LampSelector,
         LightEmittingArea,
     },
 })
 export default class Office extends Vue {
+    splitPosition = 50;
     selectedSkyColor = new Color('white');
     selectedLampColor = new Color('orange');
 

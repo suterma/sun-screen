@@ -29,13 +29,13 @@ export default class LightEmittingArea extends Vue {
     splitPosition!: number;
 
     /** The width of the split area */
-    splitWidth = 2;
+    splitWidth = 10;
 
     get lowerSplitPosition(): number {
-        return this.splitPosition - 2;
+        return this.splitPosition - this.splitWidth;
     }
     get upperSplitPosition(): number {
-        return this.splitPosition + 2;
+        return this.splitPosition + this.splitWidth;
     }
 }
 </script>

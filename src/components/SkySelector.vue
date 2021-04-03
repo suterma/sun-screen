@@ -5,7 +5,8 @@
         <div class="md-layout md-gutter">
             <div class="md-layout-item">
                 <ColorDial
-                    direction="bottom"
+                    dialClass="md-bottom-left"
+                    direction="top"
                     targetButtonName="flare"
                     :annotatedColors="lightTypes"
                     @changed="lightTypeChanged"

@@ -1,29 +1,37 @@
 <template>
     <div>
         <!-- Root -->
-        <md-speed-dial :class="dialClass" :md-direction="direction">
-            <md-speed-dial-target class="md-primary">
-                <md-icon>{{ targetButtonName }}</md-icon>
-            </md-speed-dial-target>
-            <md-speed-dial-content>
-                <span
-                    v-for="annotatedColor in annotatedColors"
-                    :key="annotatedColor.id"
+        <div class="md-layout md-gutter">
+            <div class="md-layout-item">
+                <md-speed-dial
+                    md-effect="fling"
+                    :class="dialClass"
+                    :md-direction="direction"
                 >
-                    <md-button
-                        class="md-icon-button"
-                        @click="selectedLightType = annotatedColor.id"
-                    >
-                        <md-icon class="md-size-1x">{{
-                            annotatedColor.iconName
-                        }}</md-icon>
-                    </md-button>
-                    <md-tooltip md-direction="right">
-                        {{ annotatedColor.caption }}</md-tooltip
-                    >
-                </span>
-            </md-speed-dial-content>
-        </md-speed-dial>
+                    <md-speed-dial-target class="md-primary" md-event="hover">
+                        <md-icon>{{ targetButtonName }}</md-icon>
+                    </md-speed-dial-target>
+                    <md-speed-dial-content>
+                        <span
+                            v-for="annotatedColor in annotatedColors"
+                            :key="annotatedColor.id"
+                        >
+                            <md-button
+                                class="md-icon-button"
+                                @click="selectedLightType = annotatedColor.id"
+                            >
+                                <md-icon class="md-size-1x">{{
+                                    annotatedColor.iconName
+                                }}</md-icon>
+                            </md-button>
+                            <md-tooltip md-direction="right">
+                                {{ annotatedColor.caption }}</md-tooltip
+                            >
+                        </span>
+                    </md-speed-dial-content>
+                </md-speed-dial>
+            </div>
+        </div>
     </div>
 
     <!-- Root -->
