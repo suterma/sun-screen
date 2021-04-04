@@ -23,6 +23,7 @@ import { AnnotatedColor } from '../code/AnnotatedColor';
     components: { ColorDial },
 })
 /** A selector for the color representing a sky condition
+ * @remarks Emits an Annotated color on change
  * @devdoc Values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
  */
 export default class SkySelector extends Vue {
@@ -51,26 +52,19 @@ export default class SkySelector extends Vue {
         ),
     ];
 
-    selectedLightType = this.lightTypes[0];
+    mounted() {
+        //emit the default selection
+        this.lightTypeChanged(this.selectedLightType);
+    }
+
+    selectedLightType: AnnotatedColor = this.lightTypes[0];
 
     lightTypeChanged(newVal: AnnotatedColor): void {
         this.selectedLightType = newVal;
-        this.$emit('changed', newVal.color);
+        this.$emit('changed', newVal);
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-/** pale tooltips */
-.md-tooltip.md-theme-default {
-    background-color: transparent;
-    color: rgba(0, 0, 0, 0.54);
-}
-
-/** Button tooltips more vertically centered */
-.md-tooltip.md-tooltip-left,
-.md-tooltip.md-tooltip-right {
-    padding-top: 4px;
-}
-</style>
+<style scoped></style>

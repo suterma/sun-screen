@@ -1,13 +1,22 @@
 <template>
     <div>
         <LightEmittingArea
-            :color="selectedSkyColor"
-            :colorSecondary="selectedLampColor"
+            :color="selectedSkyColor.color"
+            :colorSecondary="selectedLampColor.color"
             :splitPosition="this.splitPosition"
         />
         <GradationDial v-model.number="splitPosition" />
-        <SkySelector @changed="skyColorChanged" />
-        <LampSelector @changed="lampColorChanged" />
+        <div class="md-layout">
+            <div class="md-layout-item">
+                <SkySelector @changed="skyColorChanged" />
+                <LampSelector @changed="lampColorChanged" />
+            </div>
+        </div>
+        <md-tooltip md-direction="bottom">
+            <span> {{ selectedSkyColor.caption }} </span
+            ><span class="color-caption-separator">|</span>
+            <span> {{ selectedLampColor.caption }}</span></md-tooltip
+        >
     </div>
 </template>
 <script lang="ts">
@@ -17,6 +26,7 @@ import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
 import LampSelector from '@/components/LampSelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
 import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to /src
+import { AnnotatedColor } from '../code/AnnotatedColor';
 
 @Component({
     components: {
@@ -28,14 +38,24 @@ import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to 
 })
 export default class Office extends Vue {
     splitPosition = 50;
-    selectedSkyColor = new Color('white');
-    selectedLampColor = new Color('orange');
+    selectedSkyColor: AnnotatedColor = new AnnotatedColor(
+        'white',
+        'White',
+        new Color('white'),
+        'color'
+    );
+    selectedLampColor: AnnotatedColor = new AnnotatedColor(
+        'white',
+        'White',
+        new Color('white'),
+        'color'
+    );
 
-    skyColorChanged(newVal: Color): void {
+    skyColorChanged(newVal: AnnotatedColor): void {
         console.debug(newVal);
         this.selectedSkyColor = newVal;
     }
-    lampColorChanged(newVal: Color): void {
+    lampColorChanged(newVal: AnnotatedColor): void {
         console.debug(newVal);
         this.selectedLampColor = newVal;
     }
@@ -68,5 +88,11 @@ export default class Office extends Vue {
     .md-content {
         min-height: calc(100vh - 56px);
     }
+}
+
+/** Tooltip on colors with better separation of captions */
+.color-caption-separator {
+    padding-right: 12px;
+    padding-left: 12px;
 }
 </style>

@@ -96,6 +96,6 @@ export default class ColorDial extends Vue {
 /** Button tooltips more vertically centered */
 .md-tooltip.md-tooltip-left,
 .md-tooltip.md-tooltip-right {
-    padding-top: 4px;
+    padding-top: 0px;
 }
 </style>
