@@ -47,8 +47,10 @@ export default class GradationDial extends Vue {
 .range-slider-gradation {
     -webkit-appearance: none;
     width: 100%;
-    /* The height is set so, that most vertical space gets used by the slider, but no vertical scrolling occurs */
-    height: calc(100vh - 140px);
+    /* The height is set so, that most vertical space gets used by the slider, 
+    but no vertical scrolling occurs, 
+    and the bottom speed dials are not covered */
+    height: calc(100vh - 200px);
     background: transparent;
     outline: none;
     padding: 0;
@@ -82,9 +84,9 @@ export default class GradationDial extends Vue {
         0 12px 17px 2px rgb(0 0 0 / 14%), 0 5px 22px 4px rgb(0 0 0 / 12%);
 }
 
-/** Do not display the field separater here */
+/** Use the field separator here as a slider indicator */
 .md-field:after {
-    top: calc(50vh - 56px);
+    top: calc(50vh - 86px);
     height: 1;
 }
 </style>
