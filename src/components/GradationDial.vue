@@ -47,11 +47,14 @@ export default class GradationDial extends Vue {
 .range-slider-gradation {
     -webkit-appearance: none;
     width: 100%;
-    height: calc(100vh - 124px);
+    /* The height is set so, that most vertical space gets used by the slider, but no vertical scrolling occurs */
+    height: calc(100vh - 140px);
     background: transparent;
     outline: none;
     padding: 0;
     margin: 0;
+    /** z to hide the slider line below the slider thumb */
+    z-index: 2;
 }
 /* Range Handle, like a ripple button */
 .range-slider-gradation::-webkit-slider-thumb {
@@ -81,6 +84,7 @@ export default class GradationDial extends Vue {
 
 /** Do not display the field separater here */
 .md-field:after {
-    height: 0;
+    top: calc(50vh - 56px);
+    height: 1;
 }
 </style>
