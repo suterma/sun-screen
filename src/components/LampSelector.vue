@@ -1,38 +1,20 @@
 <template>
-    <div>
-        <!-- Root -->
-
-        <div class="md-layout md-gutter">
-            <div class="md-layout-item">
-                <ColorDial
-                    dialClass="md-bottom-right"
-                    direction="top"
-                    targetButtonName="lightbulb"
-                    :annotatedColors="lightTypes"
-                    @changed="lightTypeChanged"
-                />
-                <!-- <md-field>
-                    <input
-                        name="Brightness"
-                        id="brightness"
-                        class="width-100"
-                        type="range"
-                        v-model.number="brightness"
-                        min="0"
-                        max="1"
-                        step="0.01"
-                    />
-                </md-field> -->
-            </div>
+    <div class="md-layout md-gutter">
+        <div class="md-layout-item">
+            <ColorDial
+                dialClass="md-bottom-right"
+                direction="top"
+                targetButtonName="lightbulb"
+                :annotatedColors="lightTypes"
+                @changed="lightTypeChanged"
+            />
         </div>
     </div>
-    <!-- Root -->
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Options from 'vue-class-component';
-import { Watch } from 'vue-property-decorator';
 import Color from 'ts-color-class';
 import ColorDial from '@/components/ColorDial.vue'; // @ is an alias to /src
 import { AnnotatedColor } from '../code/AnnotatedColor';
@@ -99,27 +81,11 @@ export default class LampSelector extends Vue {
         ),
     ];
 
-    brightness = 1;
     selectedLightType = this.lightTypes[0];
 
     lightTypeChanged(newVal: AnnotatedColor): void {
         this.selectedLightType = newVal;
-        this.emitColorChange(newVal.color, this.brightness);
-    }
-
-    @Watch('brightness')
-    intensityChanged(newValue: number): void {
-        this.emitColorChange(this.selectedLightType.color, this.brightness);
-    }
-
-    emitColorChange(color: Color, brightness: number): void {
-        var dimmedColor = new Color(
-            color.getRed() * brightness,
-            color.getGreen() * brightness,
-            color.getBlue() * brightness
-        );
-        console.debug('SkySelector.vue::emitColorChange->emit', dimmedColor);
-        this.$emit('changed', dimmedColor);
+        this.$emit('changed', newVal.color);
     }
 }
 </script>
