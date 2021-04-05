@@ -1,32 +1,27 @@
 <template>
     <div>
-        <LightEmittingArea
-            :color="selectedSkyColor.color"
-            :colorSecondary="selectedLampColor.color"
-            :splitPosition="this.splitPosition"
-        />
-        <GradationDial v-model.number="splitPosition" />
+        <LightEmittingArea />
+        <GradationDial />
         <div class="md-layout">
             <div class="md-layout-item">
-                <SkySelector @changed="skyColorChanged" />
-                <LampSelector @changed="lampColorChanged" />
+                <SkySelector />
+                <LampSelector />
             </div>
         </div>
         <md-tooltip md-direction="bottom">
-            <span> {{ selectedSkyColor.caption }} </span
+            <span> {{ selectedSkyType.caption }} </span
             ><span class="color-caption-separator">|</span>
-            <span> {{ selectedLampColor.caption }}</span></md-tooltip
+            <span> {{ selectedLampType.caption }}</span></md-tooltip
         >
     </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Color from 'ts-color-class';
 import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
 import LampSelector from '@/components/LampSelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
 import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to /src
-import { AnnotatedColor } from '../code/AnnotatedColor';
+import { AnnotatedColor } from '@/code/AnnotatedColor';
 
 @Component({
     components: {
@@ -37,27 +32,12 @@ import { AnnotatedColor } from '../code/AnnotatedColor';
     },
 })
 export default class Office extends Vue {
-    splitPosition = 50;
-    selectedSkyColor: AnnotatedColor = new AnnotatedColor(
-        'white',
-        'White',
-        new Color('white'),
-        'color'
-    );
-    selectedLampColor: AnnotatedColor = new AnnotatedColor(
-        'white',
-        'White',
-        new Color('white'),
-        'color'
-    );
-
-    skyColorChanged(newVal: AnnotatedColor): void {
-        console.debug(newVal);
-        this.selectedSkyColor = newVal;
+    get selectedLampType(): AnnotatedColor {
+        return this.$store.getters.selectedLampType;
     }
-    lampColorChanged(newVal: AnnotatedColor): void {
-        console.debug(newVal);
-        this.selectedLampColor = newVal;
+
+    get selectedSkyType(): AnnotatedColor {
+        return this.$store.getters.selectedSkyType;
     }
 }
 </script>

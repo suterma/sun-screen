@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <div class="md-layout md-gutter">
-            <div class="md-layout-item">
-                <ColorDial
-                    dialClass="md-bottom-right"
-                    direction="top"
-                    targetButtonName="lightbulb"
-                    :annotatedColors="lightTypes"
-                    @changed="lightTypeChanged"
-                />
-            </div>
+    <div class="md-layout md-gutter">
+        <div class="md-layout-item">
+            <ColorDial
+                dialClass="md-bottom-right"
+                direction="top"
+                targetButtonName="lightbulb"
+                :annotatedColors="lampTypes"
+                @changed="lampTypeChanged"
+            />
         </div>
     </div>
 </template>
@@ -17,83 +15,22 @@
 <script lang="ts">
 import Vue from 'vue';
 import Options from 'vue-class-component';
-import Color from 'ts-color-class';
 import ColorDial from '@/components/ColorDial.vue'; // @ is an alias to /src
 import { AnnotatedColor } from '../code/AnnotatedColor';
 
 @Options({
     components: { ColorDial },
 })
-/** A selector for the color representing an artificial lamp
- * @remarks Emits an Annotated color on change
- * @devdoc Values taken from https://www.reddit.com/r/spaceengineers/comments/3e0k38/rgb_values_for_various_types_of_realworld_lights/
+/** A selector for an artificial lamp
+ * @remarks Uses the vuex store to retrieve and update the lamp types.
  */
 export default class LampSelector extends Vue {
-    candleColor = new Color([255, 147, 41]);
-    fourtyWattTungstenColor = new Color([255, 197, 143]);
-    hundredWattTungstenColor = new Color([255, 214, 170]);
-    halogenColor = new Color([255, 241, 224]);
-    warmFluorescentColor = new Color([255, 244, 229]);
-    standardFluorescentColor = new Color([244, 255, 250]);
-    coolWhiteFluorescentColor = new Color([212, 235, 255]);
-    fullSpectrumFluorescentColor = new Color([255, 244, 242]);
-
-    lightTypes = [
-        new AnnotatedColor('candle', 'Candle', this.candleColor, 'cake'),
-        new AnnotatedColor(
-            'fourtyWattTungsten',
-            '40W Incandescent',
-            this.fourtyWattTungstenColor,
-            'light'
-        ),
-        new AnnotatedColor(
-            'hundredWattTungsten',
-            '100W Incandescent',
-            this.hundredWattTungstenColor,
-            'tungsten'
-        ),
-        new AnnotatedColor(
-            'halogen',
-            'Halogen',
-            this.halogenColor,
-            'online_prediction'
-        ),
-        new AnnotatedColor(
-            'warmFluorescent',
-            'Warm Fluorescent',
-            this.warmFluorescentColor,
-            'wb_iridescent'
-        ),
-        new AnnotatedColor(
-            'standardFluorescent',
-            'Standard Fluorescent',
-            this.standardFluorescentColor,
-            'wb_iridescent'
-        ),
-        new AnnotatedColor(
-            'coolWhiteFluorescent',
-            'Cool White Fluorescent',
-            this.coolWhiteFluorescentColor,
-            'wb_iridescent'
-        ),
-        new AnnotatedColor(
-            'fullSpectrumFluorescent',
-            'Full Spectrum Fluorescent',
-            this.fullSpectrumFluorescentColor,
-            'wb_iridescent'
-        ),
-    ];
-
-    mounted() {
-        //emit the default selection
-        this.lightTypeChanged(this.selectedLightType);
+    lampTypeChanged(newVal: AnnotatedColor): void {
+        this.$store.dispatch('updateSelectedLampType', newVal.id);
     }
 
-    selectedLightType: AnnotatedColor = this.lightTypes[2];
-
-    lightTypeChanged(newVal: AnnotatedColor): void {
-        this.selectedLightType = newVal;
-        this.$emit('changed', newVal);
+    get lampTypes(): AnnotatedColor[] {
+        return this.$store.getters.lampTypes;
     }
 }
 </script>

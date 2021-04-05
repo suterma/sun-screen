@@ -1,42 +1,38 @@
 <template>
-    <div>
-        <!-- Root -->
-        <div class="md-layout">
-            <div class="md-layout-item">
-                <md-field>
-                    <input
-                        name="Split Position"
-                        id="splitPosition"
-                        class="range-slider-gradation"
-                        type="range"
-                        v-bind:value="value"
-                        v-on:input="$emit('input', $event.target.value)"
-                        min="0"
-                        max="100"
-                        step="0.01"
-                    />
-                </md-field>
-            </div>
+    <div class="md-layout">
+        <div class="md-layout-item">
+            <md-field>
+                <input
+                    name="Split Position"
+                    id="splitPosition"
+                    class="range-slider-gradation"
+                    type="range"
+                    v-model="gradationInflectionPoint"
+                    min="0"
+                    max="100"
+                    step="0.01"
+                />
+            </md-field>
         </div>
     </div>
-
-    <!-- Root -->
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Options from 'vue-class-component';
-import { Watch, Prop } from 'vue-property-decorator';
 @Options({
     components: {},
 })
-/** A dial for the values of the gradation
- * @remarks Takes no preset, but just emits any selected color as the "change" event
+/** A dial for the position of the inflection point of the gradation
+ * @remarks Uses the vuex store to retrieve and update the inflection point value.
  */
 export default class GradationDial extends Vue {
-    /** The value of the gradation */
-    @Prop({ required: false, type: Number })
-    value!: number;
+    get gradationInflectionPoint(): number {
+        return this.$store.getters.gradationInflectionPoint;
+    }
+    set gradationInflectionPoint(value: number) {
+        this.$store.dispatch('updateGradationInflectionPoint', value);
+    }
 }
 </script>
 
