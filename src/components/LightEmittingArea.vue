@@ -22,14 +22,12 @@ import { AnnotatedColor } from '@/code/AnnotatedColor';
  * @remarks Uses the Sky and Lamp type, plus the inflection from the vuex store.
  */
 export default class LightEmittingArea extends Vue {
-    /** The width of the inflection area, in percent */
-    inflectionWidth = 5;
-
     /** Returns the lower boundary of the inflection area */
     get lowerInflectionBoundary(): number {
         var lowerSplitPosition = Math.max(
             0,
-            Number(this.gradationInflectionPoint) - Number(this.inflectionWidth)
+            Number(this.gradationInflectionPoint) -
+                Number(this.gradationInflectionWidth)
         );
         //console.debug('lowerSplitPosition', lowerSplitPosition);
         return lowerSplitPosition;
@@ -38,7 +36,8 @@ export default class LightEmittingArea extends Vue {
     get upperInflectionBoundary(): number {
         var upperSplitPosition = Math.min(
             100,
-            Number(this.gradationInflectionPoint) + Number(this.inflectionWidth)
+            Number(this.gradationInflectionPoint) +
+                Number(this.gradationInflectionWidth)
         );
         //console.debug('upperSplitPosition', upperSplitPosition);
         return upperSplitPosition;
@@ -54,6 +53,10 @@ export default class LightEmittingArea extends Vue {
 
     get gradationInflectionPoint(): number {
         return this.$store.getters.gradationInflectionPoint;
+    }
+
+    get gradationInflectionWidth(): number {
+        return this.$store.getters.gradationInflectionWidth;
     }
 }
 </script>

@@ -93,6 +93,9 @@ export default new Vuex.Store({
 
         /** The inflecion point of the gradation, in percent */
         gradationInflectionPoint: 50,
+
+        /** The inflecion width of the gradation, in percent */
+        gradationInflectionWidth: 3,
     },
     /** Mutations, which mutate the state. Mutations are committed by Actions.
      * @remarks Mutation handlers MUST be synchronous.
@@ -173,8 +176,13 @@ export default new Vuex.Store({
         skyTypes(state): AnnotatedColor[] {
             return state.skyTypes;
         },
+        /** Gets the inflecion point of the gradation, in percent */
         gradationInflectionPoint(state): number {
             return state.gradationInflectionPoint;
+        },
+        /** Gets the inflecion width of the gradation, in percent */
+        gradationInflectionWidth(state): number {
+            return state.gradationInflectionWidth;
         },
     },
     //   modules: {},
