@@ -40,7 +40,7 @@ export default class GradationDial extends Vue {
 <style scoped>
 /** A range slider that takes almost all of the visible area, with an icon thumb
  * @devdoc It can not grow larger than the available area for this element*/
-.range-slider-gradation {
+input[type='range'].range-slider-gradation {
     -webkit-appearance: none;
     width: 100%;
     /* The height is set so, that most vertical space gets used by the slider, 
@@ -55,8 +55,9 @@ export default class GradationDial extends Vue {
     z-index: 2;
 }
 /* Range Handle, like a ripple button */
-.range-slider-gradation::-webkit-slider-thumb {
-    appearance: none;
+/* Special styling for WebKit/Blink */
+input[type='range'].range-slider-gradation::-webkit-slider-thumb {
+    -webkit-appearance: none;
     border-radius: 50%;
     background-color: var(--md-theme-default-primary, #448aff);
     cursor: pointer;
@@ -75,7 +76,40 @@ export default class GradationDial extends Vue {
     background-repeat: no-repeat;
 }
 
-.range-slider-gradation:active::-webkit-slider-thumb {
+/* Range Handle, like a ripple button */
+/* All the same stuff for Firefox */
+/* The rules can not live together, otherwise they do not get applied. Browsers will drop the entire selector if it doesn’t understand a part of it. */
+input[type='range'].range-slider-gradation::-moz-range-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: var(--md-theme-default-primary, #448aff);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+        0 1px 18px 0 rgb(0 0 0 / 12%);
+    width: 56px;
+    height: 56px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><g><rect fill="none" height="24" width="24"/></g><g><g/><g><path d="M22,8l-4-4v3H3v2h15v3L22,8z"/><path d="M2,16l4,4v-3h15v-2H6v-3L2,16z"/></g></g></svg>');
+    background-size: 43%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Range Handle, like an active ripple button */
+/* Special styling for WebKit/Blink */
+input[type='range'].range-slider-gradation:active::-webkit-slider-thumb {
+    box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%),
+        0 12px 17px 2px rgb(0 0 0 / 14%), 0 5px 22px 4px rgb(0 0 0 / 12%);
+}
+
+/* Range Handle, like an active ripple button */
+/* All the same stuff for Firefox */
+/* The rules can not live together, otherwise they do not get applied. Browsers will drop the entire selector if it doesn’t understand a part of it. */
+input[type='range'].range-slider-gradation:active::-moz-range-thumb {
     box-shadow: 0 7px 8px -4px rgb(0 0 0 / 20%),
         0 12px 17px 2px rgb(0 0 0 / 14%), 0 5px 22px 4px rgb(0 0 0 / 12%);
 }
