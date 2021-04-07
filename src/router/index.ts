@@ -1,14 +1,21 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Light from "../views/Light.vue";
+import Office from '@/views/Office.vue'; // @ is an alias to /src
+
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Light",
-    component: Light,
+    name: "Home",
+    component: Office,
+  },
+  //redundant, but allows for explizit routing, via URL, to the office path
+  {
+    path: "/office",
+    name: "Office",
+    component: Office,
   },
   {
     path: "/about",

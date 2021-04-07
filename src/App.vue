@@ -2,33 +2,20 @@
     <div class="page-container">
         <md-app>
             <md-app-toolbar class="md-primary">
-                <router-link to="/">
-                    <span class="md-title" title="SunScreen"> <AppIcon /></span>
-                </router-link>
+                <span class="md-title">SunScreen</span>
+
                 <div id="nav">
-                    <router-link to="/">Light</router-link> |
+                    <router-link to="/">Office</router-link> |
                     <router-link to="/about">About</router-link>
                 </div>
             </md-app-toolbar>
             <md-app-content>
-                <!-- App content here -->
+                <!-- Your content here -->
                 <router-view />
             </md-app-content>
         </md-app>
     </div>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import AppIcon from '@/components/AppIcon.vue'; // @ is an alias to /src
-
-@Component({
-    components: {
-        AppIcon,
-    },
-})
-export default class App extends Vue {}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

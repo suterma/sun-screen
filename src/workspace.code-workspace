@@ -6,12 +6,18 @@
     ],
 	"settings": {
 		"prettier.singleQuote": true,
-		"prettier.tabWidth": 4,
-		"editor.formatOnSave": true,
+        "prettier.tabWidth": 4,
 		"javascript.preferences.quoteStyle": "single",
+<<<<<<< HEAD
 		"typescript.preferences.quoteStyle": "single",
         "editor.detectIndentation": false,
         "vetur.format.options.tabSize": 4,
         "vetur.format.enable": false
+=======
+        "typescript.preferences.quoteStyle": "single",
+        "editor.detectIndentation": false,
+        "vetur.format.options.tabSize": 4,
+        "editor.formatOnSave": true
+>>>>>>> b3828416b8595c47ff7ef2c5b7ea3b1a231c4b1d
 	}
 }
