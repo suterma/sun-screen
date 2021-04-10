@@ -2,6 +2,7 @@ import {
     SET_SELECTED_LAMP_TYPE,
     SET_SELECTED_SKY_TYPE,
     SET_GRADATION_INFLECTION_POINT,
+    SET_NEVER_SHOW_SPLASH_AGAIN,
 } from './mutation-types';
 
 /** Updates the selected lamp type
@@ -29,10 +30,22 @@ function updateGradationInflectionPoint(
     context.commit(SET_GRADATION_INFLECTION_POINT, gradationInflectionPoint);
 }
 
+/** Updates whether to show the splash screen again
+ * @param context - The action context
+ * @param gradationInflectionPoint - The value for display of the splash screen
+ */
+function updateNeverShowSplashAgain(
+    context: any,
+    neverShowSplashAgain: boolean
+): void {
+    context.commit(SET_NEVER_SHOW_SPLASH_AGAIN, neverShowSplashAgain);
+}
+
 const actions = {
     updateSelectedLampType,
     updateSelectedSkyType,
     updateGradationInflectionPoint,
+    updateNeverShowSplashAgain,
 };
 
 export default actions;
