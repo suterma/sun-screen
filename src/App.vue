@@ -5,7 +5,8 @@
                 <span class="md-title">SunScreen</span>
 
                 <div id="nav">
-                    <router-link to="/">Office</router-link> |
+                    <!-- This uses the Office view as the Home view -->
+                    <router-link to="/">Home</router-link> |
                     <router-link to="/about">About</router-link>
                 </div>
             </md-app-toolbar>
