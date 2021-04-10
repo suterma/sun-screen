@@ -19,10 +19,10 @@
                 <p>
                     The latest version is available at
                     <a
-                        href="https://sunscreen.marcelsuter.ch"
+                        href="https://sunscreen.qrys.ch"
                         target="_blank"
                         rel="noopener"
-                        >https://sunscreen.marcelsuter.ch</a
+                        >https://sunscreen.qrys.ch</a
                     >
                 </p>
                 <p>
