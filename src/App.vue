@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
         <md-app>
-            <md-app-toolbar class="md-primary">
+            <md-app-toolbar class="md-primary md-disappear">
                 <span class="md-title">SunScreen</span>
 
                 <div id="nav">

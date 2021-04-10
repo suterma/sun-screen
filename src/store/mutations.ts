@@ -35,6 +35,22 @@ function SET_GRADATION_INFLECTION_POINT(
     state.gradationInflectionPoint = gradationInflectionPoint;
 }
 
+/** Sets whether to show the splash screen ever again
+ * @param state - The vuex state
+ * @param neverShowSplashAgain - The value for neverShowSplashAgain
+ */
+function SET_NEVER_SHOW_SPLASH_AGAIN(
+    state: SunScreenState,
+    neverShowSplashAgain: boolean
+) {
+    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+    localStorage.setItem(
+        'neverShowSplashAgain',
+        neverShowSplashAgain?.toString()
+    );
+    state.neverShowSplashAgain = neverShowSplashAgain;
+}
+
 /** Initializes the store when the app is created
  * @remarks This provides continuous state over app restarts.
  * @devdoc Maybe later replace this very simplistic approach with a more generic implementation
@@ -56,12 +72,19 @@ function initialiseStore(state: SunScreenState) {
             storedGradationInflectionPoint
         );
     }
+    const storedNeverShowSplashAgain = localStorage.getItem(
+        'neverShowSplashAgain'
+    );
+    if (storedNeverShowSplashAgain) {
+        state.neverShowSplashAgain = storedNeverShowSplashAgain == 'true';
+    }
 }
 
 const mutations = {
     SET_SELECTED_LAMP_TYPE,
     SET_SELECTED_SKY_TYPE,
     SET_GRADATION_INFLECTION_POINT,
+    SET_NEVER_SHOW_SPLASH_AGAIN,
     initialiseStore,
 };
 

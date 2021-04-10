@@ -7,4 +7,5 @@ export default interface SunScreenState {
     selectedSkyTypeId: string;
     gradationInflectionPoint: number;
     gradationInflectionWidth: number;
+    neverShowSplashAgain: boolean;
 }

@@ -2,7 +2,7 @@
     <div class="md-layout md-gutter">
         <div class="md-layout-item">
             <ColorDial
-                dialClass="md-bottom-left"
+                dialClass="md-bottom-left md-disappear"
                 direction="top"
                 targetButtonName="flare"
                 :annotatedColors="skyTypes"

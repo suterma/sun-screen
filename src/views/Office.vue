@@ -2,7 +2,8 @@
     <div>
         <LightEmittingArea />
         <GradationDial />
-        <div class="md-layout">
+        <Splash />
+        <div class="md-layout md-gutter">
             <div class="md-layout-item">
                 <SkySelector />
                 <LampSelector />
@@ -21,6 +22,7 @@ import SkySelector from '@/components/SkySelector.vue'; // @ is an alias to /src
 import LampSelector from '@/components/LampSelector.vue'; // @ is an alias to /src
 import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an alias to /src
 import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to /src
+import Splash from '@/components/Splash.vue'; // @ is an alias to /src
 import { AnnotatedColor } from '@/code/AnnotatedColor';
 
 @Component({
@@ -29,6 +31,7 @@ import { AnnotatedColor } from '@/code/AnnotatedColor';
         SkySelector,
         LampSelector,
         LightEmittingArea,
+        Splash,
     },
 })
 export default class Office extends Vue {
@@ -50,8 +53,6 @@ export default class Office extends Vue {
     left: 0;
     right: 0;
     bottom: 0;
-    /* height: 100vh; */
-    /* background: rgba(255, 0, 0, 0.5); */
     content: 'AFTER';
 }
 

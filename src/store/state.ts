@@ -82,6 +82,8 @@ const state: SunScreenState = {
 
     /** The inflecion width of the gradation, in percent */
     gradationInflectionWidth: 3,
+
+    neverShowSplashAgain: false,
 };
 
 export default state;

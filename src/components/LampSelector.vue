@@ -2,7 +2,7 @@
     <div class="md-layout md-gutter">
         <div class="md-layout-item">
             <ColorDial
-                dialClass="md-bottom-right"
+                dialClass="md-bottom-right md-disappear"
                 direction="top"
                 targetButtonName="lightbulb"
                 :annotatedColors="lampTypes"

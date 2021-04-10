@@ -26,6 +26,10 @@ function gradationInflectionPoint(state: SunScreenState): number {
 function gradationInflectionWidth(state: SunScreenState): number {
     return state.gradationInflectionWidth;
 }
+
+function neverShowSplashAgain(state: SunScreenState): boolean {
+    return state.neverShowSplashAgain;
+}
 const getters = {
     selectedLampType,
     lampTypes,
@@ -33,5 +37,6 @@ const getters = {
     skyTypes,
     gradationInflectionPoint,
     gradationInflectionWidth,
+    neverShowSplashAgain,
 };
 export default getters;

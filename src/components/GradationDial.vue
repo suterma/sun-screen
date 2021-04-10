@@ -1,7 +1,7 @@
 <template>
     <div class="md-layout">
         <div class="md-layout-item">
-            <md-field>
+            <md-field class="md-disappear">
                 <input
                     name="Split Position"
                     id="splitPosition"
