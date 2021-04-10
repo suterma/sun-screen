@@ -1,0 +1,15 @@
+/* Modifications to the material theme, for the sunscreen app */
+
+/* Define the controls as hiding, when the cursor is not hovering over the app
+*  @remarks allows to have a more clean emitter area
+*/
+
+/* Hide the speed dials (these are buttons) */
+body:not(:hover) .md-button,
+/* Hide the slider (is an input field)*/
+body:not(:hover) .md-field,
+/* Hide the menu (is a toolbar)*/
+body:not(:hover) .md-toolbar {
+    opacity: 0;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

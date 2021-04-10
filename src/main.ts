@@ -9,6 +9,8 @@ import VueMaterial from 'vue-material';
 import 'vue-material/dist/vue-material.min.css';
 // vue-material theme
 import 'vue-material/dist/theme/black-green-light.css';
+// custom mods for sunscreen
+import './../src/css/sunscreen-mods.css';
 
 Vue.use(VueMaterial);
 
