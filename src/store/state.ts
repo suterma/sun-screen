@@ -75,7 +75,7 @@ const state: SunScreenState = {
             'landscape'
         ),
     ],
-    selectedSkyTypeId: 'highNoonSun',
+    selectedSkyTypeId: 'overcastSky',
 
     /** The inflecion point of the gradation, in percent */
     gradationInflectionPoint: 50,
