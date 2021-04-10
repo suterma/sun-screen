@@ -5,6 +5,8 @@ import SunScreenState from './sunscreenstate';
  * @param lampTypeId - The Id of the selected lamp
  */
 function SET_SELECTED_LAMP_TYPE(state: SunScreenState, lampTypeId: string) {
+    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+    localStorage.setItem('selectedLampTypeId', lampTypeId);
     state.selectedLampTypeId = lampTypeId;
 }
 /** Sets the selected sky type
@@ -12,6 +14,8 @@ function SET_SELECTED_LAMP_TYPE(state: SunScreenState, lampTypeId: string) {
  * @param lampTypeId - The Id of the selected sky
  */
 function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string) {
+    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+    localStorage.setItem('selectedSkyTypeId', skyTypeId);
     state.selectedSkyTypeId = skyTypeId;
 }
 
@@ -23,13 +27,42 @@ function SET_GRADATION_INFLECTION_POINT(
     state: SunScreenState,
     gradationInflectionPoint: number
 ) {
+    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+    localStorage.setItem(
+        'gradationInflectionPoint',
+        gradationInflectionPoint.toString()
+    );
     state.gradationInflectionPoint = gradationInflectionPoint;
+}
+
+/** Initializes the store when the app is created
+ * @remarks This provides continuous state over app restarts.
+ * @devdoc Maybe later replace this very simplistic approach with a more generic implementation
+ */
+function initialiseStore(state: SunScreenState) {
+    const storedSelectedLampTypeId = localStorage.getItem('selectedLampTypeId');
+    if (storedSelectedLampTypeId) {
+        state.selectedLampTypeId = storedSelectedLampTypeId;
+    }
+    const storedSelectedSkyTypeId = localStorage.getItem('selectedSkyTypeId');
+    if (storedSelectedSkyTypeId) {
+        state.selectedSkyTypeId = storedSelectedSkyTypeId;
+    }
+    const storedGradationInflectionPoint = localStorage.getItem(
+        'gradationInflectionPoint'
+    );
+    if (storedGradationInflectionPoint) {
+        state.gradationInflectionPoint = parseInt(
+            storedGradationInflectionPoint
+        );
+    }
 }
 
 const mutations = {
     SET_SELECTED_LAMP_TYPE,
     SET_SELECTED_SKY_TYPE,
     SET_GRADATION_INFLECTION_POINT,
+    initialiseStore,
 };
 
 export default mutations;
