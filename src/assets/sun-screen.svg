@@ -13,10 +13,10 @@
    viewBox="0 0 8 8"
    id="svg24"
    sodipodi:docname="sun-screen.svg"
-   inkscape:export-filename="/home/marcel/Documents/it-projekte/sun-screen/src/assets/sun-screen.png"
+   inkscape:export-filename="/home/marcel/ownCloud/Dokumente/IT-Projekte/SunScreen/sun-screen/src/assets/sun-screen.png"
    inkscape:export-xdpi="6144"
    inkscape:export-ydpi="6144"
-   inkscape:version="1.0.2 (394de47547, 2021-03-26)">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata30">
     <rdf:RDF>
@@ -39,14 +39,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1853"
-     inkscape:window-height="1145"
+     inkscape:window-width="1848"
+     inkscape:window-height="1136"
      id="namedview26"
      showgrid="false"
      inkscape:zoom="88.75"
-     inkscape:cx="4"
-     inkscape:cy="4.9014085"
-     inkscape:window-x="67"
+     inkscape:cx="1.4591549"
+     inkscape:cy="4.8563381"
+     inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg24" />
@@ -58,46 +58,52 @@
      fill="none"
      stroke="#000"
      stroke-width=".27138"
-     id="rect2" />
+     id="rect2"
+     inkscape:export-filename="/home/marcel/Pictures/sun-screen.png"
+     inkscape:export-xdpi="6159.0283"
+     inkscape:export-ydpi="6159.0283" />
   <g
      id="g22"
-     style="fill:#000000">
+     style="fill:#ffcd00;fill-opacity:1"
+     inkscape:export-filename="/home/marcel/Pictures/sun-screen.png"
+     inkscape:export-xdpi="6159.0283"
+     inkscape:export-ydpi="6159.0283">
     <path
        d="m6.2633 3.3034c0.00401 0.00158 0.28138 0.16118 0.61638 0.35468l0.60909 0.35182-0.095032 0.055393c-0.052269 0.030467-0.32674 0.18938-0.60994 0.35314l-0.51491 0.29775-0.0052324-0.35739c-0.0081833-0.55934-0.0083498-1.0585-3.482e-4 -1.0554z"
        id="path4"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m3.298 1.7593c0.00158-0.00401 0.16118-0.28138 0.35468-0.61638l0.35182-0.60909 0.055393 0.095032c0.030466 0.052268 0.18938 0.32674 0.35314 0.60994l0.29775 0.51491-0.35739 0.00524c-0.55934 0.00818-1.0585 0.00835-1.0554 3.481e-4z"
        id="path6"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m5.1174 1.89c0.00396-0.00172 0.31294-0.084998 0.68664-0.18505l0.67946-0.18192-0.028029 0.10637c-0.015416 0.058502-0.09713 0.36495-0.18159 0.681l-0.15356 0.57464-0.25641-0.24901c-0.4013-0.38972-0.75439-0.74258-0.74651-0.74602z"
        id="path8"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m6.4773 6.4934c-0.0042851-4.84e-4 -0.31351-0.082858-0.68717-0.18306l-0.67939-0.18218 0.077458-0.078102c0.042602-0.042956 0.26659-0.26749 0.49776-0.49897l0.4203-0.42087 0.097554 0.34386c0.15267 0.53816 0.28203 1.0203 0.27349 1.0193z"
        id="path10"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m1.8843 5.1285c0.00347 0.00256 0.23008 0.22851 0.50358 0.50212l0.49728 0.49747-0.10613 0.028909c-0.058372 0.015901-0.36462 0.09836-0.68056 0.18324l-0.57443 0.15433 0.087446-0.34657c0.13686-0.5424 0.2659-1.0246 0.27282-1.0195z"
        id="path12"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m1.7317 4.7167c-0.0040139-0.0015766-0.28138-0.16118-0.61638-0.35468l-0.60909-0.35182 0.095033-0.055393c0.052268-0.030466 0.32674-0.18938 0.60994-0.35314l0.51491-0.29775 0.00524 0.35739c0.00818 0.55934 0.00835 1.0585 3.481e-4 1.0554z"
        id="path14"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m2.8773 1.8973c-0.0025613 0.0034706-0.22851 0.23008-0.50212 0.50358l-0.49747 0.49727-0.02891-0.10613c-0.0159-0.058372-0.09836-0.36462-0.18324-0.68056l-0.15433-0.57443 0.34657 0.087446c0.5424 0.13686 1.0246 0.2659 1.0195 0.27282z"
        id="path16"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m4.7042 6.2654c-0.0015752 0.0040084-0.16118 0.28138-0.35468 0.61638l-0.35182 0.60909-0.055393-0.095033c-0.030466-0.052268-0.18938-0.32674-0.35314-0.60994l-0.29775-0.51491 0.35739-0.00524c0.55934-0.00818 1.0585-0.00835 1.0554-3.481e-4z"
        id="path18"
-       style="fill:#000000" />
+       style="fill:#ffcd00;fill-opacity:1" />
     <path
        d="m3.9996 2.4829c-0.8378 0-1.5233 0.68547-1.5233 1.5233s0.68547 1.5233 1.5233 1.5233 1.5233-0.68547 1.5233-1.5233-0.68547-1.5233-1.5233-1.5233z"
        stroke-width=".76164"
-       style="mix-blend-mode:normal;fill:#000000"
+       style="mix-blend-mode:normal;fill:#ffcd00;fill-opacity:1"
        id="path20" />
   </g>
 </svg>
