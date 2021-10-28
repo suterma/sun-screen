@@ -1,8 +1,20 @@
 {
   "name": "sunscreen",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
+  "description": "SunScreen is a web app that uses the screen to emulate various natural and artificial light sources. It fills the background of the browser window with their typical representations in the RGB color space.   It's intended use is for video calls in a two-monitor setup. On one screen you can run the video call, while the unused monitor can improve the lighting.",
+  "homepage": "https://sunscreen.marcelsuter.ch",
+  "main": "./public/index.html",
+  "private": true, 
+  "keywords": [
+    "sun screen artificial light browser video lighting"
+],
+"author": {
+    "name": "Marcel Suter",
+    "email": "sunscreen.app@marcelsuter.ch",
+    "url": "https://marcelsuter.ch"
+},
+"license": "MIT",
+   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -36,5 +48,12 @@
     "prettier": "^2.2.1",
     "typescript": "~4.1.5",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/suterma/sun-screen/issues"
+},
+"repository": {
+    "type": "git",
+    "url": "https://github.com/suterma/sun-screen.git"
+}
 }
