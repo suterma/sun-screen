@@ -2,7 +2,7 @@
     <div class="page-container">
         <md-app>
             <md-app-toolbar class="md-primary md-disappear">
-                <span class="md-title">SunScreen</span>
+                <span class="md-title">sun-screen</span>
 
                 <div id="nav">
                     <!-- This uses the Office view as the Home view -->

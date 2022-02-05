@@ -1,12 +1,12 @@
 {
-  "name": "sunscreen",
-  "version": "1.0.0",
-  "description": "SunScreen is a web app that uses the screen to emulate various natural and artificial light sources. It fills the background of the browser window with their typical representations in the RGB color space.   It's intended use is for video calls in a two-monitor setup. On one screen you can run the video call, while the unused monitor can improve the lighting.",
+  "name": "sun-screen",
+  "version": "1.1.0",
+  "description": "sun-screen is a web app to improve the lighting in home office or conference video calls. In a dual monitor setup, on one screen you can run the video call, while the second monitor improves the lighting of your face. You can also use it as background light.",
   "homepage": "https://sunscreen.marcelsuter.ch",
   "main": "./public/index.html",
   "private": true, 
   "keywords": [
-    "sun screen artificial light browser video lighting"
+    "sun screen video call backlight sky color artificial light browser lighting"
 ],
 "author": {
     "name": "Marcel Suter",

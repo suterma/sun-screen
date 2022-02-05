@@ -8,9 +8,11 @@
         </p>
         <p>
             It works by using the computer or device screen to emulate various
-            natural and artificial light sources. It fills the background of the
-            browser window with their typical representations in the RGB color
-            space.
+            natural sky conditions (high noon sunlight, overcast, clear blue
+            sky) and artificial light bulbs (incandescent, fluorescent and
+            others). It fills the full screen background of the browser window
+            with their representations in the RGB color space. You can slide
+            between two colors to adapt for lighting changes during the day.
         </p>
     </div>
 </template>

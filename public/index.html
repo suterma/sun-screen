@@ -1,19 +1,91 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <!-- Roboto Font and Icons from vue-material -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
-    <title><%= process.env.VUE_APP_NAME %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= process.env.VUE_APP_NAME %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="sun-screen is a web app to improve the lighting in home office or conference video calls. In a dual monitor setup, on one screen you can run the video call, while the second monitor improves the lighting of your face. You can also use it as background light."
+        />
+        <!-- JSON-LD markup for SEO optimization. -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": ["SoftwareApplication", "WebApplication"],
+                "name": "sun-screen web app",
+                "operatingSystem": "Windows, Linux, Android, iOS",
+                "applicationCategory": "MultimediaApplication",
+                "logo": "https://sunscreen.marcelsuter.ch/img/icons/android-chrome-512x512.png",
+                "screenshot": "https://sunscreen.marcelsuter.ch/img/screenshot/sun-screen-featured-graphic.png",
+                "url": "https://sunscreen.marcelsuter.ch",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="<%= BASE_URL %>apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="<%= BASE_URL %>favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="<%= BASE_URL %>favicon-16x16.png"
+        />
+        <link rel="manifest" href="<%= BASE_URL %>manifest.json" />
+        <link
+            rel="mask-icon"
+            href="<%= BASE_URL %>safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+        <!-- Roboto Font and Icons from vue-material -->
+        <link
+            rel="stylesheet"
+            href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons"
+        />
+        <title><%= process.env.VUE_APP_NAME %></title>
+    </head>
+    <body>
+        <noscript>
+            <p>
+                <strong
+                    >We're sorry but <%= process.env.VUE_APP_NAME %> doesn't
+                    work properly without JavaScript enabled. Please enable it
+                    to continue.</strong
+                >
+            </p>
+
+            <p>
+              SunScreen is a web app to improve the lighting in home office or
+              conference video calls. In a dual monitor setup, on one screen you
+              can run the video call, while the second monitor improves the
+              lighting of your face. You can also use it as background light.
+          </p>
+          <p>
+              It works by using the computer or device screen to emulate various
+              natural sky conditions (high noon sunlight, overcast, clear blue
+              sky) and artificial light bulbs (incandescent, fluorescent and
+              others). It fills the full screen background of the browser window
+              with their representations in the RGB color space. You can slide
+              between two colors to adapt for lighting changes during the day.
+          </p>
+        </noscript>
+
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+    </body>
 </html>
