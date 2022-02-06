@@ -1,7 +1,7 @@
 <template>
     <div>
         <md-dialog :md-active.sync="showDialog">
-            <md-dialog-title>SunScreen</md-dialog-title>
+            <md-dialog-title>sun-screen</md-dialog-title>
             <md-dialog-content>
                 <div class="md-layout md-gutter">
                     <div class="md-layout-item md-xsmall-size-100">

@@ -7,7 +7,7 @@ import getters from './getters';
 
 Vue.use(Vuex);
 
-/** The store for the sunscreen application data.
+/** The store for the sun-screen application data.
  * @remarks Provides annotated colors for both sky and lamp representations.
  */
 export default new Vuex.Store({

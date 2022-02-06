@@ -5,24 +5,14 @@
                 class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
             >
                 <h2>About</h2>
-                <p>
-                    SunScreen is a web app that uses the screen to emulate
-                    various natural and artificial light sources. It fills the
-                    background of the browser window with their typical
-                    representations in the RGB color space.
-                </p>
-                <p>
-                    It's intended use is for video calls in a two-monitor setup.
-                    On one screen you can run the video call, while the unused
-                    monitor can improve the lighting.
-                </p>
+                <AboutText />
                 <p>
                     The latest version is available at
                     <a
-                        href="https://sunscreen.qrys.ch"
+                        href="https://sunscreen.marcelsuter.ch"
                         target="_blank"
                         rel="noopener"
-                        >https://sunscreen.qrys.ch</a
+                        >https://sunscreen.marcelsuter.ch</a
                     >
                 </p>
                 <p>
@@ -127,9 +117,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Options from 'vue-class-component';
+import AboutText from '@/components/AboutText.vue';
 
 @Options({
-    components: {},
+    components: { AboutText },
 })
 export default class About extends Vue {}
 </script>

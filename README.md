@@ -1,6 +1,6 @@
 # sun-screen
 
-SunScreen is a web app to improve the lighting in home office or
+sun-screen is a web app to improve the lighting in home office or
 conference video calls. In a dual monitor setup, on one screen you
 can run the video call, while the second monitor improves the
 lighting of your face. You can also use it as background light.

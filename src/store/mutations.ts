@@ -14,7 +14,6 @@ function SET_SELECTED_LAMP_TYPE(state: SunScreenState, lampTypeId: string) {
  * @param lampTypeId - The Id of the selected sky
  */
 function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string) {
-    //TODO maybe replace this very simplictic local storage approach with in a more generic way
     localStorage.setItem('selectedSkyTypeId', skyTypeId);
     state.selectedSkyTypeId = skyTypeId;
 }
@@ -25,12 +24,11 @@ function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string) {
  */
 function SET_GRADATION_INFLECTION_POINT(
     state: SunScreenState,
-    gradationInflectionPoint: number
+    gradationInflectionPoint: number,
 ) {
-    //TODO maybe replace this very simplictic local storage approach with in a more generic way
     localStorage.setItem(
         'gradationInflectionPoint',
-        gradationInflectionPoint.toString()
+        gradationInflectionPoint.toString(),
     );
     state.gradationInflectionPoint = gradationInflectionPoint;
 }
@@ -41,19 +39,18 @@ function SET_GRADATION_INFLECTION_POINT(
  */
 function SET_NEVER_SHOW_SPLASH_AGAIN(
     state: SunScreenState,
-    neverShowSplashAgain: boolean
+    neverShowSplashAgain: boolean,
 ) {
     //TODO maybe replace this very simplictic local storage approach with in a more generic way
     localStorage.setItem(
         'neverShowSplashAgain',
-        neverShowSplashAgain?.toString()
+        neverShowSplashAgain?.toString(),
     );
     state.neverShowSplashAgain = neverShowSplashAgain;
 }
 
 /** Initializes the store when the app is created
  * @remarks This provides continuous state over app restarts.
- * @devdoc Maybe later replace this very simplistic approach with a more generic implementation
  */
 function initialiseStore(state: SunScreenState) {
     const storedSelectedLampTypeId = localStorage.getItem('selectedLampTypeId');
@@ -65,15 +62,15 @@ function initialiseStore(state: SunScreenState) {
         state.selectedSkyTypeId = storedSelectedSkyTypeId;
     }
     const storedGradationInflectionPoint = localStorage.getItem(
-        'gradationInflectionPoint'
+        'gradationInflectionPoint',
     );
     if (storedGradationInflectionPoint) {
         state.gradationInflectionPoint = parseInt(
-            storedGradationInflectionPoint
+            storedGradationInflectionPoint,
         );
     }
     const storedNeverShowSplashAgain = localStorage.getItem(
-        'neverShowSplashAgain'
+        'neverShowSplashAgain',
     );
     if (storedNeverShowSplashAgain) {
         state.neverShowSplashAgain = storedNeverShowSplashAgain == 'true';
