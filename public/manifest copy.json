@@ -1,10 +1,7 @@
 {
-    "name": "sun-screen: your monitor as a light source",
-    "short_name": "sun-screen",
-    "description": "sun-screen is a web app to improve the lighting in home office or conference video calls. In a dual monitor setup, on one screen you can run the video call, while the second monitor improves the lighting of your face. You can also use it as background light.",
-    "lang": "en-US",
-    "theme_color": "#FFFFFF",
-    "categories": ["productivity"],
+    "name": "SunScreen: Your monitor as a light source",
+    "short_name": "SunScreen",
+    "theme_color": "#4DBA87",
     "icons": [
         {
             "src": "./img/icons/android-chrome-192x192.png",
@@ -34,11 +31,13 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",
+    "lang": "en-US",
+    "description": "SunScreen is a web app that uses the screen to emulate various natural and artificial light sources. It fills the background of the browser window with their typical representations in the RGB color space.    It's intended use is for video calls in a two-monitor setup. On one screen you can run the video call, while the unused monitor can improve the lighting.",
     "screenshots": [
         {
-            "src": "/img/screenshot/sun-screen-featured-graphic.png",
+            "src": "/img/sunscreen.qrys.ch_.png",
             "type": "image/png",
-            "sizes": "858x503"
+            "sizes": "543x487"
         }
     ]
 }
