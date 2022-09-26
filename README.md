@@ -22,3 +22,5 @@ between two colors to adapt for lighting changes during the day.
 Try it out: https://sunscreen.marcelsuter.ch
 
 Source code is availabe at https://github.com/suterma/sun-screen
+---
+[sun-screen](https://sunscreen.marcelsuter.ch) is created with love by [Marcel Suter](https://marcelsuter.ch).
