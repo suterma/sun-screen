@@ -10,7 +10,7 @@ conference video calls. In a dual monitor setup, on one screen you
 can run the video call, while the second monitor improves the
 lighting of your face. You can also use it as background light.
 
-![Visual Functioning Overview](/public/img/screenshot/sun-screen-featured-graphic.png)
+![Visual Functioning Overview](/public/img/screenshot/Screenshot_20220926-190042_Chrome.png)
 
 It works by using the computer or device screen to emulate various
 natural sky conditions (high noon sunlight, overcast, clear blue
