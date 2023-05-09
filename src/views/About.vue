@@ -115,7 +115,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 import Options from 'vue-class-component';
 import AboutText from '@/components/AboutText.vue';
 
@@ -124,5 +124,3 @@ import AboutText from '@/components/AboutText.vue';
 })
 export default class About extends Vue {}
 </script>
-
-<style scoped></style>
