@@ -25,7 +25,7 @@ function updateSelectedSkyType(context: any, skyTypeId: string): void {
  */
 function updateGradationInflectionPoint(
     context: any,
-    gradationInflectionPoint: string
+    gradationInflectionPoint: string,
 ): void {
     context.commit(SET_GRADATION_INFLECTION_POINT, gradationInflectionPoint);
 }
@@ -36,7 +36,7 @@ function updateGradationInflectionPoint(
  */
 function updateNeverShowSplashAgain(
     context: any,
-    neverShowSplashAgain: boolean
+    neverShowSplashAgain: boolean,
 ): void {
     context.commit(SET_NEVER_SHOW_SPLASH_AGAIN, neverShowSplashAgain);
 }
