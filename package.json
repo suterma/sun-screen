@@ -1,59 +1,59 @@
 {
-  "name": "sun-screen",
-  "version": "1.1.0",
-  "description": "sun-screen is a web app to improve the lighting in home office or conference video calls. In a dual monitor setup, on one screen you can run the video call, while the second monitor improves the lighting of your face. You can also use it as background light.",
-  "homepage": "https://sunscreen.marcelsuter.ch",
-  "main": "./public/index.html",
-  "private": true, 
-  "keywords": [
-    "sun screen video call backlight sky color artificial light browser lighting"
-],
-"author": {
-    "name": "Marcel Suter",
-    "email": "sunscreen.app@marcelsuter.ch",
-    "url": "https://marcelsuter.ch"
-},
-"license": "MIT",
-   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.10.1",
-    "register-service-worker": "^1.7.1",
-    "ts-color-class": "^0.10.1",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-material": "^1.0.0-beta-15",
-    "vue-property-decorator": "^9.1.2",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "prettier": "^2.2.1",
-    "typescript": "~4.1.5",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "bugs": {
-    "url": "https://github.com/suterma/sun-screen/issues"
-},
-"repository": {
-    "type": "git",
-    "url": "https://github.com/suterma/sun-screen.git"
-}
+    "name": "sun-screen",
+    "version": "1.1.0",
+    "description": "sun-screen is a web app to improve the lighting in home office or conference video calls. In a dual monitor setup, on one screen you can run the video call, while the second monitor improves the lighting of your face. You can also use it as background light.",
+    "homepage": "https://sunscreen.marcelsuter.ch",
+    "main": "./public/index.html",
+    "private": true,
+    "keywords": [
+        "sun screen video call backlight sky color artificial light browser lighting"
+    ],
+    "author": {
+        "name": "Marcel Suter",
+        "email": "sunscreen.app@marcelsuter.ch",
+        "url": "https://marcelsuter.ch"
+    },
+    "license": "MIT",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "core-js": "^3.10.1",
+        "register-service-worker": "^1.7.1",
+        "ts-color-class": "^0.10.1",
+        "vue": "^2.7.14",
+        "vue-class-component": "^7.2.6",
+        "vue-material": "^1.0.0-beta-15",
+        "vue-property-decorator": "^9.1.2",
+        "vue-router": "^3.6.5",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.21.0",
+        "@typescript-eslint/parser": "^4.21.0",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-pwa": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-typescript": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^7.0.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^6.2.2",
+        "prettier": "^2.2.1",
+        "typescript": "~4.1.5",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "bugs": {
+        "url": "https://github.com/suterma/sun-screen/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/suterma/sun-screen.git"
+    }
 }
