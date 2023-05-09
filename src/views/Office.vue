@@ -24,6 +24,7 @@ import LightEmittingArea from '@/components/LightEmittingArea.vue'; // @ is an a
 import GradationDial from '@/components/GradationDial.vue'; // @ is an alias to /src
 import Splash from '@/components/Splash.vue'; // @ is an alias to /src
 import { AnnotatedColor } from '@/code/AnnotatedColor';
+import NoSleep from 'nosleep.js';
 
 @Component({
     components: {
@@ -41,6 +42,15 @@ export default class Office extends Vue {
 
     get selectedSkyType(): AnnotatedColor {
         return this.$store.getters.selectedSkyType;
+    }
+
+    noSleep = new NoSleep();
+
+    mounted(): void {
+        this.noSleep.enable();
+    }
+    destroyed(): void {
+        this.noSleep.disable();
     }
 }
 </script>

@@ -67,6 +67,15 @@
                         </a>
                         by Dan Steinman (No licence, copyright with the author)
                     </li>
+                    <li>
+                        <a
+                            href="https://github.com/richtr/NoSleep.js"
+                            target="_blank"
+                            rel="noopener"
+                            >NoSleep.js
+                        </a>
+                        by Rich Tibbett (MIT license copyright (c) Rich Tibbett)
+                    </li>
                 </ul>
             </div>
             <div

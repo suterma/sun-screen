@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "core-js": "^3.10.1",
+        "nosleep.js": "^0.12.0",
         "register-service-worker": "^1.7.1",
         "ts-color-class": "^0.10.1",
         "vue": "^2.7.14",
