@@ -4,8 +4,10 @@ import SunScreenState from './sunscreenstate';
  * @param state - The vuex state
  * @param lampTypeId - The Id of the selected lamp
  */
-function SET_SELECTED_LAMP_TYPE(state: SunScreenState, lampTypeId: string) {
-    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+function SET_SELECTED_LAMP_TYPE(
+    state: SunScreenState,
+    lampTypeId: string,
+): void {
     localStorage.setItem('selectedLampTypeId', lampTypeId);
     state.selectedLampTypeId = lampTypeId;
 }
@@ -13,7 +15,7 @@ function SET_SELECTED_LAMP_TYPE(state: SunScreenState, lampTypeId: string) {
  * @param state - The vuex state
  * @param lampTypeId - The Id of the selected sky
  */
-function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string) {
+function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string): void {
     localStorage.setItem('selectedSkyTypeId', skyTypeId);
     state.selectedSkyTypeId = skyTypeId;
 }
@@ -25,7 +27,7 @@ function SET_SELECTED_SKY_TYPE(state: SunScreenState, skyTypeId: string) {
 function SET_GRADATION_INFLECTION_POINT(
     state: SunScreenState,
     gradationInflectionPoint: number,
-) {
+): void {
     localStorage.setItem(
         'gradationInflectionPoint',
         gradationInflectionPoint.toString(),
@@ -40,8 +42,7 @@ function SET_GRADATION_INFLECTION_POINT(
 function SET_NEVER_SHOW_SPLASH_AGAIN(
     state: SunScreenState,
     neverShowSplashAgain: boolean,
-) {
-    //TODO maybe replace this very simplictic local storage approach with in a more generic way
+): void {
     localStorage.setItem(
         'neverShowSplashAgain',
         neverShowSplashAgain?.toString(),
@@ -52,7 +53,7 @@ function SET_NEVER_SHOW_SPLASH_AGAIN(
 /** Initializes the store when the app is created
  * @remarks This provides continuous state over app restarts.
  */
-function initialiseStore(state: SunScreenState) {
+function initialiseStore(state: SunScreenState): void {
     const storedSelectedLampTypeId = localStorage.getItem('selectedLampTypeId');
     if (storedSelectedLampTypeId) {
         state.selectedLampTypeId = storedSelectedLampTypeId;

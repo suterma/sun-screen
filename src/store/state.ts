@@ -8,49 +8,49 @@ const state: SunScreenState = {
             'candle',
             'Candle',
             new Color([255, 147, 41]),
-            'cake'
+            'cake',
         ),
         new AnnotatedColor(
             'fourtyWattTungsten',
             '40W Incandescent',
             new Color([255, 197, 143]),
-            'light'
+            'light',
         ),
         new AnnotatedColor(
             'hundredWattTungsten',
             '100W Incandescent',
             new Color([255, 214, 170]),
-            'tungsten'
+            'tungsten',
         ),
         new AnnotatedColor(
             'halogen',
             'Halogen',
             new Color([255, 241, 224]),
-            'online_prediction'
+            'online_prediction',
         ),
         new AnnotatedColor(
             'warmFluorescent',
             'Warm Fluorescent',
             new Color([255, 244, 229]),
-            'wb_iridescent'
+            'wb_iridescent',
         ),
         new AnnotatedColor(
             'standardFluorescent',
             'Standard Fluorescent',
             new Color([244, 255, 250]),
-            'wb_iridescent'
+            'wb_iridescent',
         ),
         new AnnotatedColor(
             'coolWhiteFluorescent',
             'Cool White Fluorescent',
             new Color([212, 235, 255]),
-            'wb_iridescent'
+            'wb_iridescent',
         ),
         new AnnotatedColor(
             'fullSpectrumFluorescent',
             'Full Spectrum Fluorescent',
             new Color([255, 244, 242]),
-            'wb_iridescent'
+            'wb_iridescent',
         ),
     ],
     selectedLampTypeId: 'hundredWattTungsten',
@@ -60,19 +60,19 @@ const state: SunScreenState = {
             'highNoonSun',
             'High Noon Sun',
             new Color([255, 255, 251]),
-            'light_mode'
+            'light_mode',
         ),
         new AnnotatedColor(
             'overcastSky',
             'Overcast Sky',
             new Color([201, 226, 255]),
-            'wb_cloudy'
+            'wb_cloudy',
         ),
         new AnnotatedColor(
             'clearBlueSky',
             'Clear Blue Sky',
             new Color([64, 156, 255]),
-            'landscape'
+            'landscape',
         ),
     ],
     selectedSkyTypeId: 'overcastSky',

@@ -3,7 +3,7 @@ import SunScreenState from './sunscreenstate';
 
 function selectedLampType(state: SunScreenState): AnnotatedColor {
     return state.lampTypes.filter(
-        (lampType) => lampType.id === state.selectedLampTypeId
+        (lampType) => lampType.id === state.selectedLampTypeId,
     )[0];
 }
 
@@ -12,7 +12,7 @@ function lampTypes(state: SunScreenState): AnnotatedColor[] {
 }
 function selectedSkyType(state: SunScreenState): AnnotatedColor {
     return state.skyTypes.filter(
-        (skyType) => skyType.id === state.selectedSkyTypeId
+        (skyType) => skyType.id === state.selectedSkyTypeId,
     )[0];
 }
 function skyTypes(state: SunScreenState): AnnotatedColor[] {
